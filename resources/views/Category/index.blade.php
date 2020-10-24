@@ -2,6 +2,7 @@
     <header></header>
     <body>
         <h1>Listado de categorias</h1>
+        <a href="{{ route('category.create') }}">Nueva Categoria</a>
         <hr>
         <table border="1">
             <thead>
@@ -25,10 +26,10 @@
                         <td>{{ $category->nombre }}</td>
                         <td>{{ $category->imagen }}</td>
                         <td>
-                            <a href="/category/{{ $category->id }}">VER</a>
+                            <a href="{{ route('category.show', $category->id) }}">VER</a>
                         </td>
                         <td>
-                            <a href="/category/{{ $category->id }}">EDITAR</a>
+                            <a href="{{ route('category.edit', $category->id) }}">EDITAR</a>
                         </td>
                         <td>
                             <form action="{{ route('category.destroy', $category->id) }}" method="POST">

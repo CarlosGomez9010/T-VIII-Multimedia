@@ -19,12 +19,3 @@ Route::get('/', function () {
 });
 
 Route::resource('category', CategoryController::class);
-
-/*
-GET /category -> index
-
-GET /category/create
-POST
-DELETE
-
-*/
