@@ -20,6 +20,13 @@ class CreateProductsTable extends Migration
             $table->string('nombre',100);
             $table->string('imagen',150);
             $table->text('descripcion');
+
+            $table->unsignedBigInteger('category_id');
+
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');
         });
     }
 
